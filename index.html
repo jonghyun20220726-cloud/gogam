@@ -18,19 +18,22 @@
     }
 
     #lizard2 {
-        margin-top: -30%;
+        margin-top: -25%;
         margin-left: 40%;
+        height: auto;
+        width: 20vw;
     }
 
     #lizard1 {
         margin-top: 10%;
         margin-left: 8%;
     }
-
+/*여기 위치 조정하기(다른것도)*/
     #lizard3 {
-        margin-top: 20%;
         margin-left: 70%;
-        margin-top: -30%;
+        width: 30vw;
+        height: auto;
+        margin-top: -50%
     }
 
     body,
@@ -40,36 +43,80 @@
 
     #tk {
         font-size: 1.5vw;
+        cursor: pointer;
     }
 
     #dd {
         font-size: 1vw;
+    }
+
+    #music {
+        cursor: pointer;
+        width: 3vw;
+        height: 2vw;
+        background-color:white;
+        text-align: center;
+    }
+
+    #tt {
+        display: none;
+    }
+
+    #close {
+        font-size: 1.5vw;
+        cursor: pointer;
     }
 </style>
 
 
 
 <body>
-    <audio src="bayside-bossa.mp3" controls autoplay></audio>
+    <div id="music" onclick="노래()">
+        <strong>노래</strong>
+    </div>
+    <audio src="bayside-bossa.mp3" loop id="ms"></audio>
+
     <h1 id="tit">오늘도 곶감이 숭배하자</h1>
     <div lizarddiv>
-        <img src="https://media.discordapp.net/attachments/1356508793076318335/1532280573979131924/20251120_200807.jpg?ex=6a6c46fd&is=6a6af57d&hm=2b91a56dcc365ac7886d52316c90399a8198ba462fe30b30ad127df9ff4e19ae&=&format=webp&width=1760&height=793"
+        <img src="https://media.discordapp.net/attachments/1532565343208476770/1533017537032486992/20260226_130524.jpg?ex=6a6ef556&is=6a6da3d6&hm=e51598fdb8870dfc6e9e8911202bcc1f97a6d02b40353556f6941450148270f9&=&format=webp&width=810&height=715"
             class="lizard" id="lizard1">
         <div>
 
-            <img src="https://media.discordapp.net/attachments/1356508793076318335/1532280572821504000/20260226_130524.jpg?ex=6a6c46fc&is=6a6af57c&hm=b24305192b4064e08679acc287980873d76ee711e5d0e934f13d38c50ffb831d&=&format=webp&width=926&height=818"
+            <img src="https://media.discordapp.net/attachments/1532565343208476770/1533017538064023602/20260210_181542.jpg?ex=6a6ef557&is=6a6da3d7&hm=a5120a2508c0903a84a024b605d252647f58fb7b41a91d8c5fe8eea5f3bc0785&=&format=webp&width=322&height=715"
                 class="lizard" id="lizard2">
         </div>
 
-        <img src="https://media.discordapp.net/attachments/1356508793076318335/1532280573244997642/20260226_131250.jpg?ex=6a6c46fd&is=6a6af57d&hm=283faf42eff26227ea59a81e762ca3150473ad1e040a6827a60f61379f8c9cd8&=&format=webp&width=1760&height=793"
+        <img src="https://media.discordapp.net/attachments/1532565343208476770/1533017537703444621/20260226_131250.jpg?ex=6a6ef557&is=6a6da3d7&hm=1590547cb63bfb7574c8b5f36c326b83323901edec82463a6c650fc82bc4cdf7&=&format=webp&width=1254&height=565"
             class="lizard" id="lizard3">
     </div>
     <hr>
-    <h2 id="tk">곶감이 특징 보기</h2>
-
+    <h2 id="tk" onclick="버튼()"><strong>곶감이 특징 보기</strong></h2>
+    <div id="tt">
+        <p>
+            <ul> 
+                <li>
+                <!--여기 곶감이 특징 쓰기-->
+                </li>
+            </ul>
+        </p>
+        <p id="close" onclick="닫기()"><strong>닫기</strong></p>
+    </div>
+    <hr>
+<!--ui/사진 작업하기                      -->
 
 
     <script>
+        //여기 나중에 function작업하기
+function 노래() {
+document.getElementById("ms").play();
+}
+
+function 버튼() {
+    document.getElementById("tt").style.display = "block";
+}
+    function 닫기() {
+        document.getElementById("tt").style.display = "none";
+    }
 
 
     </script>
