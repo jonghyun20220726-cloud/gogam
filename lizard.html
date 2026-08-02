@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>곶감이 숭배 사이트</title>
+</head>
+<style>
+    #tit {
+        font-size: 3vw;
+        text-align: center;
+    }
+
+    .lizard {
+        width: 20vw;
+        height: auto;
+    }
+
+    #lizard2 {
+        margin-top: -30%;
+        margin-left: 40%;
+    }
+
+    #lizard1 {
+        margin-top: 10%;
+        margin-left: 8%;
+    }
+
+    #lizard3 {
+        margin-top: 20%;
+        margin-left: 70%;
+        margin-top: -30%;
+    }
+
+    body,
+    html {
+        background-color: orange;
+    }
+
+    #tk {
+        font-size: 2.2vw;
+        cursor: pointer;
+    }
+
+    #dd {
+        font-size: 1vw;
+    }
+
+    #music {
+        width: 2vw;
+        height: 2vw;
+        cursor: pointer;
+        text-align: center;
+        background-color: beige;
+        animation-name: ms;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes ms {
+        0% {
+            background-color: beige;
+        }
+
+        25% {
+            background-color: rgb(248, 248, 213);
+        }
+
+        50% {
+            background-color: rgb(252, 252, 209);
+        }
+
+        75% {
+            background-color: rgb(247, 247, 192);
+        }
+
+        100% {
+            background-color: beige;
+        }
+
+
+
+    }
+
+    #lizard4 {
+        margin-left: 70%;
+        margin-top: -16%;
+    }
+
+    #sp {
+        font-size: 2vw;
+    }
+
+    #lizard5 {
+        margin-right: 50%;
+
+
+        /*사진 위치초정하기 + class되있어서 크기 조정 x*/
+    }
+
+    #fun {
+        font-size: 2vw;
+        cursor: pointer;
+    }
+
+    #d {
+        display: none;
+    }
+
+    #close {
+        cursor: pointer;
+        font-size: 2vw;
+    }
+</style>
+
+
+
+<body>
+    <div><img src="#" alt="사진을 추가하는중">
+
+
+        <div id="music" onclick="노래()"><strong>노래</strong></div>
+        <audio src="edd.mp3" id="mp" loop></audio>
+        <h1 id="tit">오늘도 곶감이 숭배하자</h1>
+        <div lizarddiv>
+            <img src="곶감이1.jpg" class="lizard" id="lizard1">
+            <div>
+
+                <img src="곶감이2.jpg" class="lizard" id="lizard2">
+            </div>
+
+            <img src="곶감이3.jpg" class="lizard" id="lizard3">
+        </div>
+        <hr>
+
+        <h2 id="tk" onclick="보이기()"><strong>곶감이 특징 보기</strong></h2>
+        <hr>
+
+
+        <div id="d">
+            <div id="sp">
+                <p>
+                    가끔씩 윙크를 한다<br>
+                    꼬리가 매우 통통하다<br>
+                    파충류동반자때 대려옴<br>
+                    밥그릇에 머리를 얹어두고 자는것을 좋아함<br>
+                    매우활동적
+                    <!--나중에 디자인/뼈대 더 잡기-->
+                </p>
+
+            </div>
+            <img src="곶감이4.jpg" alt="사진을 불러오는중" id="lizard4" class="lizard">
+            <img src="#" alt="사진을 불러오는중" id="lizard5" class="lizard"> <!--나중에 사진 추가-->
+            <p onclick="닫기()" id="close">닫기</p>
+            <hr>
+
+        </div>
+        <h2 id="fun" onclick="window.location.href='fun.html'"><strong>곶감이 놀아주기</strong></h2>
+        <hr>
+
+
+
+
+        <script>
+            alert("모바일 기기는 화면이 이상할수도 있습니다")
+
+            //이거 기억하기
+            function 노래() {
+                const mp = document.getElementById("mp");
+                const music = document.getElementById("music");
+
+                mp.volume = 0.5;
+
+                if (mp.paused) {
+                    mp.play();
+                    const shet = music.innerHTML = "끄기";
+                }
+                else {
+                    mp.pause();
+                    const on = music.innerHTML = "켜기";
+                }
+
+
+
+            }
+
+            function 보이기() {
+                document.getElementById("d").style.display = "block";
+            }
+
+            function 닫기() {
+                document.getElementById("d").style.display = "none";
+            }
+
+
+
+        </script>
+
+</body>
+
+</html>
