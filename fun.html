@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>곶감이 놀아주기</title>
+</head>
+<style>
+    body {
+        background-color: rgb(250, 192, 86);
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .my {
+        margin-top: -40%;
+        margin-left: 30%;
+        font-size: 1.5vw;
+    }
+
+    #lizard2 {
+        margin-left: 28%;
+        width: 45vw;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #lizard2:hover {
+        width: 50vw;
+        height: auto;
+    }
+
+    #lizard1 {
+        display: none;
+        width: 50vw;
+        height: auto;
+        cursor: pointer;
+        margin-left: 26%;
+    }
+
+    #lizard3 {
+        display: none;
+        width: 50vw;
+        height: auto;
+        cursor: pointer;
+        margin-left: 26%;
+    }
+
+    .lizard {
+        border-radius: 10%;
+    }
+
+    #run {
+        background-color: antiquewhite;
+        width: 10vw;
+        text-align: center;
+        border-radius: 13%;
+        cursor: pointer;
+
+    }
+
+    #run:hover {
+        border-radius: 5%;
+    }
+
+    #shr {
+        display: none;
+    }
+</style>
+
+<body>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/-NEXKEocqpE?si=siE7hadSimMHy0Pf"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen id="shr"></iframe>
+
+    <div id="frame" onclick="">이거누르면이링크가실행되야함</div>
+
+
+    <div id="run" onclick="window.location.href ='index.html'">곶감이 숭배사이트로<br> 돌아가기</div>
+
+    <h1>곶감이를 만져주세요!</h1>
+    <div>
+        <img src="곶감이2.jpg" class="lizard" id="lizard2" onclick="와하2() " alt=" 사진을 불러오는중">
+
+        <div class="my">
+            <p><strong>저를 만져주세요!</strong></p>
+        </div>
+    </div>
+
+    <div>
+        <img src="곶감이1.jpg" class="lizard" id="lizard1" alt="사진을 불러오는중" onclick="와하3()">
+    </div>
+    <img src="곶감이3.jpg" id="lizard3" alt="사진 불러오는중" onclick="와하4()" class="lizard">
+    <script>
+
+        function 와하2() {
+            alert("와하!");
+            document.getElementById("lizard2").style.width = "1px";
+            document.getElementById("lizard1").style.display = "block";
+        }
+
+        function 와하3() {
+            alert("와하!!");
+            document.getElementById("lizard3").style.display = "block";
+
+            document.getElementById("lizard1").style.width = "1px";
+        }
+        function 와하4() {
+            alert("와하!!!");
+            document.getElementById("lizard3").style.display = "block";
+
+        }
+
+        function 노래() {
+            const msd = document.getElementById("shr");
+            const di = document.getElementById("frame");
+
+            if (msd.pauesd) {
+                msd.play();
+                document.getElementById("frame").innerHTML = "ㅇ"
+            }
+            else {
+                msd.paues();
+                document.getElementById("frame").innerHTML = "ㄹ"
+            }
+
+
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

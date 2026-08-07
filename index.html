@@ -56,6 +56,7 @@
         animation-name: ms;
         animation-duration: 3s;
         animation-iteration-count: infinite;
+        border-radius: 30%;
     }
 
     @keyframes ms {
@@ -112,18 +113,92 @@
         cursor: pointer;
         font-size: 2vw;
     }
+
+    #ddin {
+        margin-left: 50%;
+    }
+
+    body {
+        border-radius: 50%;
+        border: 1px;
+        background-color: beige;
+        animation-name: bod;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+
+
+    }
+
+    /*이거 기억하기 body에도 애니메이션 적용 가능*/
+
+    @keyframes bod {
+        0% {
+            background-color: beige;
+        }
+
+        25% {
+            background-color: rgb(250, 250, 216);
+        }
+
+        50% {
+            background-color: rgb(248, 248, 201);
+        }
+
+        75% {
+            background-color: rgb(250, 250, 195);
+        }
+
+        100% {
+            background-color: rgb(250, 250, 195);
+        }
+    }
+
+    #sp {
+        animation-name: ss;
+        animation-duration: 2s;
+    }
+
+    @keyframes ss {
+        0% {
+            margin-top: 2%;
+        }
+
+        25% {
+            margin-top: 4%;
+        }
+
+        50% {
+            margin-top: 5%;
+        }
+
+        75% {
+            margin-top: 7%;
+        }
+
+        100% {
+            margin-top: 8%;
+        }
+
+
+
+    }
 </style>
 
 
 
 <body>
+
+    <div id="dod"></div>
+
     <div><img src="#" alt="사진을 추가하는중">
+d
 
-
-        <div id="music" onclick="노래()"><strong>노래</strong></div>
+        <div id="music" onclick="노래()"><strong>
+                <p id="md">노래</p>
+            </strong></div>
         <audio src="edd.mp3" id="mp" loop></audio>
         <h1 id="tit">오늘도 곶감이 숭배하자</h1>
-        <div lizarddiv>
+        <div id="lizarddiv">
             <img src="곶감이1.jpg" class="lizard" id="lizard1">
             <div>
 
@@ -139,6 +214,7 @@
 
 
         <div id="d">
+
             <div id="sp">
                 <p>
                     가끔씩 윙크를 한다<br>
@@ -146,8 +222,10 @@
                     파충류동반자때 대려옴<br>
                     밥그릇에 머리를 얹어두고 자는것을 좋아함<br>
                     매우활동적
+
                     <!--나중에 디자인/뼈대 더 잡기-->
                 </p>
+                <p id="ddin">와 응나 귀엽네;</p>
 
             </div>
             <img src="곶감이4.jpg" alt="사진을 불러오는중" id="lizard4" class="lizard">
@@ -184,6 +262,7 @@
 
 
             }
+            //이거이거이거
 
             function 보이기() {
                 document.getElementById("d").style.display = "block";
